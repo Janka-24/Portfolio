@@ -1,31 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import avatar from '../public/img/janka.png'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home'
+import ScrollToTop from './components/ScrollToTop';
+import Project from './pages/Project';
 
 function App() {
   return (
-    <body>
-      <header>
-        <div>
-          <h1>Janka</h1>
-        </div>
-
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Project</a>
-          <a href="#">About me</a>
-        </div>
-      </header>
-      <main>
-        <div id="avatarContainer">
-          <img src={avatar} alt="Janka" id="avatar" />
-        </div>
-      </main>
-      <footer></footer>
-
-    </body>
-  )
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path='/portfolio' element={<Home />} />
+        <Route path='/portfolio/project' element={<Project />} />
+        <Route path='/portfolio/about' element={<Home />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;

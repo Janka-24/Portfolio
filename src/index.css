@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --acc-color: #CBB99F;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -25,6 +29,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
 }
 
 header a {
@@ -50,7 +55,7 @@ header>div:nth-child(2) {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 main {
@@ -62,6 +67,53 @@ main {
   justify-content: center;
 }
 
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--acc-color);
+  border-radius: 5px;
+  padding: 1em;
+  z-index: 5;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.menu>div {
+  height: 65%;
+  width: 90%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: end;
+  gap: 5%;
+}
+
+.menu>div {
+  a {
+    font-size: 150%;
+  }
+}
+
+.menu.open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0;
+}
+
 #avatarContainer {
   border-radius: 360px;
   width: 400px;
@@ -69,12 +121,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: burlywood;
+  background-color: var(--acc-color);
   overflow: hidden;
+  margin-top: 2em;
 }
 
 #avatar {
   border-radius: 50%;
   max-width: 100% !important;
   height: auto;
+}
+
+@media only screen and (max-width: 450px) {
+  #avatarContainer {
+    width: 300px;
+    height: 300px;
+  }
 }
