@@ -1,22 +1,20 @@
-import { useState } from 'react'
-import avatar from '../../public/img/janka.png'
-import Header from '../components/header.jsx'
+import { useState } from 'react';
+import avatar from '../../public/img/janka.png';
+import AboutMe from '../components/AboutMe';
 
 function Home() {
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false);
 
     return (
-        <body>
-            <Header />
-            <main>
+        <>
+            <section id='landing'>
                 <div id="avatarContainer">
                     <img src={avatar} alt="Janka" id="avatar" />
                 </div>
-            </main>
-            <footer></footer>
-
-        </body>
-    )
+            </section>
+            <AboutMe />
+        </>
+    );
 }
 
-export default Home
+export default Home;

@@ -4,14 +4,10 @@ import Header from '../components/header.jsx'
 function Project() {
 
     return (
-        <body>
-            <Header />
-            <main>
-                <h1>Adra</h1>
-            </main>
-            <footer></footer>
+        <section>
+            <h1>Adra</h1>
+        </section>
 
-        </body>
     )
 }
 
