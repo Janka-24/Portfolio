@@ -19,8 +19,8 @@ function Header() {
             <nav className={`menu ${isOpen ? 'open' : ''}`}>
                 <div>
                     <Link to={'/portfolio'}>Home</Link>
-                    <Link to={'/portfolio/project'}>About me</Link>
-                    <Link to={'/portfolio/project'}>Project</Link>
+                    <Link to={'/portfolio/#'}>About me</Link>
+                    <Link to={'/portfolio/#'}>Project</Link>
                 </div>
             </nav>
         </>

@@ -22,8 +22,8 @@ function Home() {
             <div id='project'>
                 <h3>Project</h3>
                 <div id="projectContainer">
-                    <Project name="Shiva" img={Shiva} />
-                    <Project name="Shiva" img={Shiva} />
+                    <Project name="Shiva" img={Shiva} tech="React JS" description="Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changer leur identité visuelle sur internet depuis 2014." />
+                    <Project name="Shiva" img={Shiva} tech="React JS" description="Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changer leur identité visuelle sur internet depuis 2014." />
                 </div>
             </div>
         </>
@@ -40,11 +40,15 @@ const FormationCard = (props) => {
 const Project = (props) => {
     return (
         <div className='projectCard' style={{ backgroundImage: `url(${props.img})` }}>
-            <div>
+            <div className='glassmorphism'></div>
+            <div className='content'>
                 <h3>{props.name}</h3>
+                <p>{props.description}</p>
+                <p>{props.tech}</p>
             </div>
         </div>
     );
 }
+
 
 export default Home;
