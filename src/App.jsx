@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home'
 import ScrollToTop from './components/ScrollToTop';
-import Project from './pages/Project';
 import Header from './components/header.jsx'
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/portfolio' element={<Home />} />
-        <Route path='/portfolio/project' element={<Project />} />
+        {/* <Route path='/portfolio/project' element={<Project />} /> */}
         <Route path='/portfolio/about' element={<Home />} />
       </Routes>
     </>

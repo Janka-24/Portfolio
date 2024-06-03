@@ -1,19 +1,50 @@
 import { useState } from 'react';
-import avatar from '../../public/img/janka.png';
-import AboutMe from '../components/AboutMe';
+import Shiva from '../assets/shiva.png';
+import avatar from '../assets/janka.png';
 
 function Home() {
     const [isOpen, setOpen] = useState(false);
 
     return (
         <>
-            <section id='landing'>
+            <div id='introduction'>
+                <div>
+                    <h1>Muthulingam Kajan</h1>
+                    <h3>Développeur et designer junior</h3>
+                </div>
+                <div>
+                    <p>Étudiant en informatique au CFPT à Genève, en Suisse, passionné par le développement front-end et le design. Junior front-end developer et designer.</p>
+                </div>
                 <div id="avatarContainer">
                     <img src={avatar} alt="Janka" id="avatar" />
                 </div>
-            </section>
-            <AboutMe />
+            </div>
+            {/* <div id='project'>
+                <h3>Project</h3>
+                <div id="projectContainer">
+                    <Project name="Shiva" img={Shiva} />
+                    <Project name="Shiva" img={Shiva} />
+                </div>
+            </div> */}
+
         </>
+    );
+}
+const FormationCard = (props) => {
+    return (
+        <div className='formationCard'>
+            <h3>{props.ecole}</h3>
+        </div>
+    )
+}
+
+const Project = (props) => {
+    return (
+        <div className='projectCard' style={{ backgroundImage: `url(${props.img})` }}>
+            <div>
+                <h3>{props.name}</h3>
+            </div>
+        </div>
     );
 }
 
