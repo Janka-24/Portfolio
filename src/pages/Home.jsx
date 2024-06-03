@@ -26,19 +26,6 @@ function Home() {
                     <Project name="Shiva" img={Shiva} />
                 </div>
             </div>
-            <div id='introduction'>
-                <div>
-                    <h1>Muthulingam Kajan</h1>
-                    <h3>Front-end dev & designer junior</h3>
-                </div>
-                <div>
-                    <p>Étudiant en informatique au CFPT à Genève, en Suisse, passionné par le développement front-end et le design.</p>
-                </div>
-                <div id="avatarContainer">
-                    <img src={avatar} alt="Janka" id="avatar" />
-                </div>
-            </div>
-
         </>
     );
 }
