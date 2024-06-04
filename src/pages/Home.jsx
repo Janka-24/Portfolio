@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Shiva from '../assets/shiva.png';
 import avatar from '../assets/janka.png';
+import reactLogo from '../assets/react.svg';
 
 function Home() {
     const [isOpen, setOpen] = useState(false);
@@ -22,13 +23,27 @@ function Home() {
             <div id='project'>
                 <h3>Project</h3>
                 <div id="projectContainer">
-                    <Project name="Shiva" img={Shiva} tech="React JS" description="Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changer leur identité visuelle sur internet depuis 2014." />
-                    <Project name="Shiva" img={Shiva} tech="React JS" description="Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changer leur identité visuelle sur internet depuis 2014." />
+                    <Project
+                        img={Shiva}
+                        name={"Shiva"}
+                        year={2024}
+                        description={"Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changé leur identité visuelle sur internet depuis 2014."}
+                        techImgs={[reactLogo]}
+                    />
+
+                    <Project
+                        img={Shiva}
+                        name={"Shiva"}
+                        year={2024}
+                        description={"Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changé leur identité visuelle sur internet depuis 2014."}
+                        techImgs={[reactLogo]}
+                    />
                 </div>
             </div>
         </>
     );
 }
+
 const FormationCard = (props) => {
     return (
         <div className='formationCard'>
@@ -42,13 +57,20 @@ const Project = (props) => {
         <div className='projectCard' style={{ backgroundImage: `url(${props.img})` }}>
             <div className='glassmorphism'></div>
             <div className='content'>
-                <h3>{props.name}</h3>
+                <div className='ctHeader'>
+                    <h3>{props.name}</h3>
+                    <p className='projectCardYear'>{props.year}</p>
+                </div>
+
                 <p>{props.description}</p>
-                <p>{props.tech}</p>
+                <div className='techIcons'>
+                    {props.techImgs.map((techImg, index) => (
+                        <img key={index} src={techImg} alt={`techLogo${index}`} className='projectTechIcon' />
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
-
 
 export default Home;

@@ -143,6 +143,7 @@ section {
   flex-direction: column;
   justify-content: start;
   margin-top: 2em;
+  gap: 2em;
 }
 
 #introduction>div:nth-child(1) {
@@ -152,8 +153,6 @@ section {
   align-items: start;
   flex-direction: column;
   justify-content: start;
-  margin-bottom: 2em;
-
   h3 {
     font-weight: 400;
   }
@@ -174,7 +173,7 @@ section {
 }
 
 #project {
-  width: 100%;
+  width: 80%;
   min-height: 40% !important;
   display: flex;
   align-items: start;
@@ -205,14 +204,15 @@ section {
 .projectCard {
   background-size: cover;
   background-position: center;
-  min-width: 80%;
-  min-height: 80%;
+  min-width: 25em;
+  min-height: 10em;
   display: flex;
   align-items: end;
   justify-content: center;
   color: white;
   border-radius: 16px;
   position: relative;
+  overflow: hidden;
 }
 
 .projectCard::after {
@@ -222,7 +222,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 11, 15, 0.55);
+  background: rgba(0, 0, 0, 0.55);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.5px);
@@ -231,7 +231,7 @@ section {
 }
 
 .projectCard .content {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -243,4 +243,34 @@ section {
   justify-content: center;
   z-index: 1;
   gap: 1em;
+}
+
+.projectTechIcon {
+  height: 60%;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.projectCardYear {
+  font-size: 70%;
+}
+
+.ctHeader {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+  h3{
+    font-size: 160%;
+  }
 }
