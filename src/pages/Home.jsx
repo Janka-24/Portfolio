@@ -2,6 +2,10 @@ import { useState } from 'react';
 import Shiva from '../assets/shiva.png';
 import avatar from '../assets/janka.png';
 import reactLogo from '../assets/react.svg';
+import tailwindLogo from '../assets/tailwind.svg';
+import phpLogo from '../assets/php.svg';
+import mySqlLogo from '../assets/mysql.svg';
+import Muthufy from '../assets/muthu.png';
 
 function Home() {
     const [isOpen, setOpen] = useState(false);
@@ -32,11 +36,11 @@ function Home() {
                     />
 
                     <Project
-                        img={Shiva}
-                        name={"Shiva"}
+                        img={Muthufy}
+                        name={"Muthufy"}
                         year={2024}
-                        description={"Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changé leur identité visuelle sur internet depuis 2014."}
-                        techImgs={[reactLogo]}
+                        description={`Je développe une application similaire à Spotify en utilisant React JS et Tailwind CSS. J’utilise une base de données MySQL pour stocker les informations et récupère les données via l'API en PHP`}
+                        techImgs={[reactLogo, tailwindLogo, phpLogo, mySqlLogo]}
                     />
                 </div>
             </div>
