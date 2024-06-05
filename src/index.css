@@ -121,12 +121,6 @@ section {
   height: auto;
 }
 
-@media only screen and (max-width: 450px) {
-  #avatarContainer {
-    width: 300px;
-    height: 300px;
-  }
-}
 
 #aboutMe {
   min-height: 100%;
@@ -204,7 +198,7 @@ section {
 
 
 #projectContainer>div:nth-child(1) {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .projectCard {
@@ -253,7 +247,6 @@ section {
   gap: 1em;
   /* text-wrap: pretty; */
   overflow: hidden;
-
 }
 
 .cardDescription{
@@ -286,4 +279,23 @@ section {
   display: flex;
   align-items: center;
   gap: 2em;
+}
+
+@media only screen and (max-width: 450px) {
+  #avatarContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  #introduction>div:nth-child(1) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    h1{
+      font-size: 170%;
+    }
+    h3 {
+      font-weight: 200;
+      font-size: 100%;
+    }
+  }
 }
