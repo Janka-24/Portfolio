@@ -66,7 +66,7 @@ const Project = (props) => {
                     <p className='projectCardYear'>{props.year}</p>
                 </div>
 
-                <p>{props.description}</p>
+                <p className='cardDescription'>{props.description}</p>
                 <div className='techIcons'>
                     {props.techImgs.map((techImg, index) => (
                         <img key={index} src={techImg} alt={`techLogo${index}`} className='projectTechIcon' />
