@@ -15,7 +15,7 @@ function Home() {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <>
+        <main>
             <div id='introduction'>
                 <div>
                     <h1>Muthulingam Kajan</h1>
@@ -90,7 +90,7 @@ function Home() {
                     </a>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
 

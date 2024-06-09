@@ -22,6 +22,14 @@ body,
   background-color: var(--bg-color);
   color: white;
 }
+main{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5em;
+}
 
 header {
   width: 80%;
@@ -169,12 +177,11 @@ section {
 
 #project {
   width: 100%;
-  min-height: 45% !important;
+  min-height: 25% !important;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4em;
   overflow-y: hidden;
 }
 
@@ -306,13 +313,11 @@ section {
 
 #competence {
   width: 100%;
-  min-height: 45%;
+  min-height: 35%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4em;
-  margin-bottom: 15em;
 }
 
 #competenceContainer {
@@ -343,8 +348,8 @@ section {
 
 
 .competenceIcon {
-  width: 80px;
-  height: 80px;
+  min-height: 35%;
+  max-height: 35%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,17 +371,20 @@ section {
 
 .competenceCard>div>p {
   font-weight: 200;
+  font-size: 80%;
+  text-wrap: wrap;
 }
 
 
 #contact {
   width: 100%;
-  min-height: 45% !important;
+  min-height: 20% !important;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   overflow-y: hidden;
+  margin-bottom: 4em;
 }
 
 .contactContainer {
