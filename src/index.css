@@ -351,6 +351,7 @@ section {
 .competenceIcon {
   min-height: 35%;
   max-height: 35%;
+  max-width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
