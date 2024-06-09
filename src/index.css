@@ -175,11 +175,12 @@ section {
   flex-direction: column;
   justify-content: center;
   margin-top: 4em;
-  margin-bottom: 4em;
   overflow-y: hidden;
 }
 
-#project>h3 {
+#project>h3,
+#competence>h3,
+#contact>h3 {
   width: 80%;
 }
 
@@ -249,7 +250,7 @@ section {
   overflow: hidden;
 }
 
-.cardDescription{
+.cardDescription {
   font-size: 90%;
 }
 
@@ -290,12 +291,115 @@ section {
   #introduction>div:nth-child(1) {
     margin-top: 1em;
     margin-bottom: 1em;
-    h1{
+
+    h1 {
       font-size: 170%;
     }
+
     h3 {
       font-weight: 200;
       font-size: 100%;
     }
+  }
+}
+
+
+#competence {
+  width: 100%;
+  min-height: 45%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 15em;
+}
+
+#competenceContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 3em;
+  padding-top: 2em;
+}
+
+.competenceCard {
+  min-width: 80%;
+  max-width: 85%;
+  min-height: 10em;
+  max-height: 15em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: 0.5px solid rgba(41, 41, 41, 0.5);
+  border-radius: 5px;
+}
+
+
+.competenceIcon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turning {
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.competenceCard>div>p {
+  font-weight: 200;
+}
+
+
+#contact {
+  width: 100%;
+  min-height: 45% !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.contactContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding-top: 2em;
+}
+
+.mediaContainer{
+  width: 8em;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  img{
+    width: 2em;
   }
 }

@@ -5,6 +5,10 @@ import reactLogo from '../assets/react.svg';
 import tailwindLogo from '../assets/tailwind.svg';
 import phpLogo from '../assets/php.svg';
 import mySqlLogo from '../assets/mysql.svg';
+import css from '../assets/css.png';
+import insta from '../assets/insta.svg';
+import github from '../assets/github.svg';
+import gmail from '../assets/gmail.svg';
 import Muthufy from '../assets/muthu.png';
 
 function Home() {
@@ -15,7 +19,7 @@ function Home() {
             <div id='introduction'>
                 <div>
                     <h1>Muthulingam Kajan</h1>
-                    <h3>Front-end dev & designer junior</h3>
+                    <h3>Junior Dev</h3>
                 </div>
                 <div>
                     <p>Étudiant en informatique au CFPT à Genève, en Suisse, passionné par le développement front-end et le design.</p>
@@ -33,6 +37,7 @@ function Home() {
                         year={2024}
                         description={"Un site web pour un restaurant Sri Lankais et indien située à Gèneve qui n'avait pas changé leur identité visuelle sur internet depuis 2014."}
                         techImgs={[reactLogo]}
+                        url="https://shiva-restaurant.ch"
                     />
 
                     <Project
@@ -41,24 +46,77 @@ function Home() {
                         year={2024}
                         description={`Je développe une application similaire à Spotify en utilisant React JS et Tailwind CSS. J’utilise une base de données MySQL pour stocker les informations et récupère les données via l'API en PHP`}
                         techImgs={[reactLogo, tailwindLogo, phpLogo, mySqlLogo]}
+                        url="https://github.com/Janka-24/Muthufy"
                     />
+                </div>
+            </div>
+            <div id='competence'>
+                <h3>Comment puis-je vous aider ?</h3>
+                <div id="competenceContainer">
+                    <CompetenceCard
+                        title="React"
+                        img={reactLogo}
+                        description="UI dynamiques et interactives avec la bibliothèque JS"
+                        turn={true}
+                    />
+                    <CompetenceCard
+                        title="CSS"
+                        img={css}
+                        description="Création d'UI."
+                        turn={false}
+                    />
+                    <CompetenceCard
+                        title="MySQL"
+                        img={mySqlLogo}
+                        description="BDD relationnelles avec MySQL."
+                        turn={false}
+                    />
+                </div>
+            </div>
+            <div id='contact'>
+                <h3>Contact</h3>
+                <div className='contactContainer'>
+                    <a href="#" className='mediaContainer'>
+                        <img src={insta} alt="" />
+                        <p>kajan.24</p>
+                    </a>
+                    <a href="#" className='mediaContainer'>
+                        <img src={github} alt="" />
+                        <p>Janka-24</p>
+                    </a>
+                    <a href="#" className='mediaContainer'>
+                        <img src={gmail} alt="" />
+                        <p>kajanm2006@gmail.com</p>
+                    </a>
                 </div>
             </div>
         </>
     );
 }
 
-const FormationCard = (props) => {
+const CompetenceCard = (props) => {
+    const { turn, title, description, img } = props;
     return (
-        <div className='formationCard'>
-            <h3>{props.ecole}</h3>
+        <div className='competenceCard'>
+            <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+            <img
+                src={img}
+                alt={`techLogo`}
+                className={`competenceIcon ${turn ? 'turning' : ''}`}
+            />
         </div>
-    )
+    );
 }
 
 const Project = (props) => {
+    const handleClick = () => {
+        window.location.href = props.url;
+    }
     return (
-        <div className='projectCard' style={{ backgroundImage: `url(${props.img})` }}>
+        <div className='projectCard' style={{ backgroundImage: `url(${props.img})` }} onClick={handleClick}>
             <div className='glassmorphism'></div>
             <div className='content'>
                 <div className='ctHeader'>
