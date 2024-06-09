@@ -29,7 +29,7 @@ main{
   flex-direction: column;
   justify-content: space-around;
   gap: 5em;
-  margin-top: 8em;
+  margin-top: 15em;
 }
 
 header {
