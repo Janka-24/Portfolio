@@ -22,7 +22,8 @@ body,
   background-color: var(--bg-color);
   color: white;
 }
-main{
+
+main {
   width: 100%;
   display: flex;
   align-items: center;
@@ -357,7 +358,7 @@ section {
 }
 
 .turning {
-  animation: spin 60s linear infinite;
+  animation: spin 9s linear infinite;
 }
 
 @keyframes spin {
@@ -399,7 +400,7 @@ section {
   padding-top: 2em;
 }
 
-.mediaContainer{
+.mediaContainer {
   width: 8em;
   height: 4em;
   display: flex;
@@ -408,7 +409,46 @@ section {
   justify-content: space-between;
   color: white;
   text-decoration: none;
-  img{
+
+  img {
     width: 2em;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  #competenceContainer {
+    flex-direction: row;
+    width: 80%;
+    height: 40%;
+  }
+
+  main {
+    margin-top: 0;
+    gap: 1em;
+  }
+
+  .competenceCard {
+    min-width: 25em;
+    max-width: 25em;
+  }
+
+  #introduction{
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #introduction>div:nth-child(1){
+    min-height: 80%;
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+  }
+
+  #avatarContainer {
+    min-width: 25em !important;
+    max-width: 25em !important;
   }
 }

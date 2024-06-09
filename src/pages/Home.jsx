@@ -18,11 +18,13 @@ function Home() {
         <main>
             <div id='introduction'>
                 <div>
-                    <h1>Muthulingam Kajan</h1>
-                    <h3>Junior Dev</h3>
-                </div>
-                <div>
-                    <p>Étudiant en informatique au CFPT à Genève, en Suisse, passionné par le développement front-end et le design.</p>
+                    <div>
+                        <h1>Muthulingam Kajan</h1>
+                        <h3>Junior Dev</h3>
+                    </div>
+                    <div>
+                        <p>Étudiant en informatique au CFPT à Genève, en Suisse, passionné par le développement front-end et le design.</p>
+                    </div>
                 </div>
                 <div id="avatarContainer">
                     <img src={avatar} alt="Janka" id="avatar" />
