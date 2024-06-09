@@ -11,9 +11,9 @@ function Header() {
                 <div>
                     <h1>Janka</h1>
                 </div>
-                <div className="hamburger-container">
+                {/* <div className="hamburger-container">
                     <Hamburger toggled={isOpen} toggle={setOpen} />
-                </div>
+                </div> */}
             </header>
 
             <nav className={`menu ${isOpen ? 'open' : ''}`}>
