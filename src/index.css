@@ -115,14 +115,14 @@ section {
 
 #avatarContainer {
   border-radius: 50%;
-  min-width: 18em !important;
-  min-height: 18em !important;
+  width: 22em !important;
+  height: 22em !important;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--acc-color);
   overflow: hidden;
-  margin-top: 2em;
+  margin-top: 5em;
 }
 
 #avatar {
@@ -409,6 +409,7 @@ section {
   justify-content: space-between;
   color: white;
   text-decoration: none;
+  font-size: 80%;
 
   img {
     width: 2em;
