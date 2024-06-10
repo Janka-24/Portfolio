@@ -396,7 +396,7 @@ section {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 3em;
+  gap: 5em;
   padding-top: 2em;
 }
 
@@ -432,14 +432,14 @@ section {
     max-width: 25em;
   }
 
-  #introduction{
+  #introduction {
     align-items: start;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
   }
 
-  #introduction>div:nth-child(1){
+  #introduction>div:nth-child(1) {
     min-height: 80%;
     width: 50%;
     display: flex;

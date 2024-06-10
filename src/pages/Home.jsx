@@ -6,6 +6,7 @@ import tailwindLogo from '../assets/tailwind.svg';
 import phpLogo from '../assets/php.svg';
 import mySqlLogo from '../assets/mysql.svg';
 import css from '../assets/css.png';
+import bento from '../assets/bento.png';
 import insta from '../assets/insta.svg';
 import github from '../assets/github.svg';
 import gmail from '../assets/gmail.svg';
@@ -78,21 +79,22 @@ function Home() {
             <div id='contact'>
                 <h3>Contact</h3>
                 <div className='contactContainer'>
-                    <a href="#" className='mediaContainer'>
-                        <img src={insta} alt="" />
-                        <p>kajan.24</p>
-                    </a>
-                    <a href="#" className='mediaContainer'>
-                        <img src={github} alt="" />
-                        <p>Janka-24</p>
-                    </a>
-                    <a href="#" className='mediaContainer'>
-                        <img src={gmail} alt="" />
-                        <p>kajanm2006@gmail.com</p>
-                    </a>
+                    <MediaCard username="kajan" img={bento} url="https://bento.me/kajan" />
+                    <MediaCard username="kajanm2006@gmail.com" img={gmail}/>
+                    <MediaCard username="Janka-24" img={github} url="https://github.com/Janka-24" />
+                    <MediaCard username="kajan.24" img={insta} url="https://www.instagram.com/kajan.24?igsh=NnA4cjJqejFucnR5&utm_source=qr" />
                 </div>
             </div>
         </main>
+    );
+}
+
+const MediaCard = (props) => {
+    return (
+        <a href={props.url} className='mediaContainer'>
+            <img src={props.img} alt="md" />
+            <p>{props.username}</p>
+        </a>
     );
 }
 
