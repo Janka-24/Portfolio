@@ -8,6 +8,7 @@ import mySqlLogo from '../assets/mysql.svg';
 import css from '../assets/css.png';
 import insta from '../assets/insta.svg';
 import github from '../assets/github.svg';
+import shadcn from '../assets/shadcn.svg';
 import gmail from '../assets/gmail.svg';
 import Muthufy from '../assets/muthu.png';
 
@@ -41,7 +42,14 @@ function Home() {
                         techImgs={[reactLogo]}
                         url="https://shiva-restaurant.ch"
                     />
-
+                    <Project
+                        img={Muthufy}
+                        name={"Réservation"}
+                        year={2024}
+                        description={`Réserver une date et un créneau horaire`}
+                        techImgs={[reactLogo, shadcn, tailwindLogo]}
+                        url="https://reservation-app-d2142.web.app/"
+                    />
                     <Project
                         img={Muthufy}
                         name={"Muthufy"}
@@ -50,6 +58,8 @@ function Home() {
                         techImgs={[reactLogo, tailwindLogo, phpLogo, mySqlLogo]}
                         url="https://github.com/Janka-24/Muthufy"
                     />
+
+
                 </div>
             </div>
             <div id='competence'>
