@@ -12,6 +12,7 @@ import github from '../assets/github.svg';
 import shadcn from '../assets/shadcn.svg';
 import gmail from '../assets/gmail.svg';
 import Muthufy from '../assets/muthu.png';
+import firebase from '../assets/firebase.svg';
 
 function Home() {
     const [isOpen, setOpen] = useState(false);
@@ -47,8 +48,8 @@ function Home() {
                         img={Muthufy}
                         name={"Réservation"}
                         year={2024}
-                        description={`Réserver une date et un créneau horaire`}
-                        techImgs={[reactLogo, shadcn, tailwindLogo]}
+                        description={`Réserver une date et un créneau horaire, suivi du tuto de la minute du code.`}
+                        techImgs={[reactLogo, shadcn, firebase, tailwindLogo]}
                         url="https://reservation-app-d2142.web.app/"
                     />
                     <Project
@@ -90,7 +91,7 @@ function Home() {
                 <h3>Contact</h3>
                 <div className='contactContainer'>
                     <MediaCard username="kajan" img={bento} url="https://bento.me/kajan" />
-                    <MediaCard username="kajanm2006@gmail.com" img={gmail}/>
+                    <MediaCard username="kajanm2006@gmail.com" img={gmail} />
                     <MediaCard username="Janka-24" img={github} url="https://github.com/Janka-24" />
                     <MediaCard username="kajan.24" img={insta} url="https://www.instagram.com/kajan.24?igsh=NnA4cjJqejFucnR5&utm_source=qr" />
                 </div>
